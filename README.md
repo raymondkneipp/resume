@@ -15,7 +15,7 @@ The `src` directory contains all the components and styles needed to generate yo
 This project uses the following dependencies:
 
 - React
-- React-PDF
+- [React-PDF](https://react-pdf.org/)
 
 ## Contributions
 
