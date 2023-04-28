@@ -3,6 +3,7 @@ import { cleanUrl } from '../../utils'
 import { CodeIcon, LinkIcon } from '../icons'
 import PrefixWithIcon from '../prefix-with-icon'
 import { projects } from '../../data'
+import Bullet from '../bullet'
 
 const Projects = () => {
   return (
@@ -32,24 +33,22 @@ const Projects = () => {
 
             {source && (
               <PrefixWithIcon icon={<CodeIcon />}>
-                <Link src={source}>{cleanUrl(source)}</Link>
+                <Link src={source} style={{ textDecoration: 'none' }}>
+                  {cleanUrl(source)}
+                </Link>
               </PrefixWithIcon>
             )}
 
             <PrefixWithIcon icon={<LinkIcon />}>
-              <Link src={demo}>{cleanUrl(demo)}</Link>
+              <Link src={demo} style={{ textDecoration: 'none' }}>
+                {cleanUrl(demo)}
+              </Link>
             </PrefixWithIcon>
           </View>
 
-          <View
-            style={{
-              marginLeft: 10,
-            }}
-          >
-            {bullets.map((bullet) => (
-              <Text style={{ textAlign: 'justify' }}>- {bullet}</Text>
-            ))}
-          </View>
+          {bullets.map((bullet) => (
+            <Bullet text={bullet} />
+          ))}
         </>
       ))}
     </View>

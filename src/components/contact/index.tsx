@@ -16,7 +16,13 @@ const Contact = () => {
     >
       {contactMethods.map(({ icon, text, href }) => (
         <PrefixWithIcon icon={icon}>
-          {href ? <Link src={href}>{text}</Link> : <Text>{text}</Text>}
+          {href ? (
+            <Link src={href} style={{ textDecoration: 'none' }}>
+              {text}
+            </Link>
+          ) : (
+            <Text>{text}</Text>
+          )}
         </PrefixWithIcon>
       ))}
     </View>

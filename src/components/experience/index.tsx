@@ -1,6 +1,7 @@
 import { Text, View } from '@react-pdf/renderer'
 import DateRange from '../date-range'
 import { experiences } from '../../data'
+import Bullet from '../bullet'
 
 const Experience = () => {
   const sortedExperiences = experiences.sort(
@@ -42,15 +43,9 @@ const Experience = () => {
               <DateRange startDate={startDate} endDate={endDate} />
             </View>
 
-            <View
-              style={{
-                marginLeft: 10,
-              }}
-            >
-              {bullets.map((bullet) => (
-                <Text style={{ textAlign: 'justify' }}>- {bullet}</Text>
-              ))}
-            </View>
+            {bullets.map((bullet) => (
+              <Bullet text={bullet} />
+            ))}
           </>
         )
       )}
