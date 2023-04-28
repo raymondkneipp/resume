@@ -63,10 +63,10 @@ const Resume = () => {
         </View>
 
         <Contact />
+        <Skills />
         <Experience />
         <Projects />
         <Education />
-        <Skills />
       </Page>
     </Document>
   )
