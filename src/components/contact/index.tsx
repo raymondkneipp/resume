@@ -9,22 +9,49 @@ const Contact = () => {
         display: 'flex',
         flexDirection: 'row',
         columnGap: 10,
-        flexWrap: 'wrap',
         justifyContent: 'space-between',
         margin: '0 10 0 10',
       }}
     >
-      {contactMethods.map(({ icon, text, href }) => (
-        <PrefixWithIcon icon={icon}>
-          {href ? (
-            <Link src={href} style={{ textDecoration: 'none' }}>
-              {text}
-            </Link>
-          ) : (
-            <Text>{text}</Text>
-          )}
-        </PrefixWithIcon>
-      ))}
+      <View style={{ display: 'flex', flexDirection: 'column' }}>
+        {contactMethods.slice(0, 2).map(({ icon, text, href }) => (
+          <PrefixWithIcon icon={icon}>
+            {href ? (
+              <Link src={href} style={{ textDecoration: 'none' }}>
+                {text}
+              </Link>
+            ) : (
+              <Text>{text}</Text>
+            )}
+          </PrefixWithIcon>
+        ))}
+      </View>
+      <View style={{ display: 'flex', flexDirection: 'column' }}>
+        {contactMethods.slice(2, 4).map(({ icon, text, href }) => (
+          <PrefixWithIcon icon={icon}>
+            {href ? (
+              <Link src={href} style={{ textDecoration: 'none' }}>
+                {text}
+              </Link>
+            ) : (
+              <Text>{text}</Text>
+            )}
+          </PrefixWithIcon>
+        ))}
+      </View>
+      <View style={{ display: 'flex', flexDirection: 'column' }}>
+        {contactMethods.slice(4, 6).map(({ icon, text, href }) => (
+          <PrefixWithIcon icon={icon}>
+            {href ? (
+              <Link src={href} style={{ textDecoration: 'none' }}>
+                {text}
+              </Link>
+            ) : (
+              <Text>{text}</Text>
+            )}
+          </PrefixWithIcon>
+        ))}
+      </View>
     </View>
   )
 }

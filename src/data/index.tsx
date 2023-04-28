@@ -20,6 +20,11 @@ export const title = 'Full Stack Web Developer'
 
 export const contactMethods: ContactMethod[] = [
   {
+    icon: <LinkedInIcon />,
+    text: 'linkedin.com/in/raymondkneipp',
+    href: 'https://linkedin.com/in/raymondkneipp',
+  },
+  {
     icon: <MailIcon />,
     text: 'hello@raymondkneipp.com',
     href: 'mailto:hello@raymondkneipp.com',
@@ -30,9 +35,9 @@ export const contactMethods: ContactMethod[] = [
     href: 'https://github.com/raymondkneipp',
   },
   {
-    icon: <LinkedInIcon />,
-    text: 'linkedin.com/in/raymondkneipp',
-    href: 'https://linkedin.com/in/raymondkneipp',
+    icon: <PhoneIcon />,
+    text: '(513) 680-0072',
+    href: 'tel:5136800072',
   },
   {
     icon: <LinkIcon />,
@@ -42,11 +47,6 @@ export const contactMethods: ContactMethod[] = [
   {
     icon: <MapPinIcon />,
     text: 'Cincinnati, OH',
-  },
-  {
-    icon: <PhoneIcon />,
-    text: '(513) 680-0072',
-    href: 'tel:5136800072',
   },
 ]
 

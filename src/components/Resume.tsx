@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   page: {
     backgroundColor: '#fff',
     fontSize: 10,
-    padding: 30,
+    padding: '30 30 20 30',
     fontFamily: 'Jost',
     display: 'flex',
     flexDirection: 'column',
@@ -67,6 +67,9 @@ const Resume = () => {
         <Experience />
         <Projects />
         <Education />
+        <Text style={{ textAlign: 'center', fontSize: 8 }}>
+          Created with React-PDF
+        </Text>
       </Page>
     </Document>
   )
