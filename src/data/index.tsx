@@ -64,6 +64,20 @@ export const education: Education[] = [
 
 export const experiences: Experience[] = [
   {
+    title: 'Full Stack Developer',
+    company: 'Zoee',
+    startDate: new Date(2023, 6),
+    bullets: [
+      'Developed and maintained a full stack web application using React, Stripe, Jest, Python with AWS Lambdas, and MySQL, resulting in improved user experience and increased revenue.',
+      'Created and executed comprehensive test suites using Jest, ensuring high code quality and minimizing bugs and issues.',
+      'Utilized Python and AWS Lambdas to develop serverless backend functionality, optimizing performance and scalability.',
+      'Collaborated with cross-functional teams to gather requirements, plan sprints, and manage tasks using Jira, ensuring efficient project management and timely delivery.',
+      'Containerized application components using Docker, enabling easy deployment and scalability across different environments.',
+      'Leveraged AWS SAM (Serverless Application Model) to streamline deployment and management of serverless applications on AWS, reducing infrastructure management overhead.',
+      'Participated in agile development methodologies, delivering features and enhancements in regular sprints, ensuring timely delivery and customer satisfaction.',
+    ],
+  },
+  {
     title: 'Web Developer',
     company: 'Freelance',
     startDate: new Date(2015, 4),
