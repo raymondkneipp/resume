@@ -9,6 +9,8 @@ export interface Experience extends DateRange {
   bullets: string[]
 }
 
+export interface Bootcamp extends Experience {}
+
 export interface ContactMethod {
   icon: React.ReactNode
   text: string
