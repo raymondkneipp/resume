@@ -1,5 +1,7 @@
 import { Text, View } from '@react-pdf/renderer'
-import { education } from '../../data'
+import { bootcamp, education } from '../../data'
+import Bullet from '../bullet'
+import DateRange from '../date-range'
 
 const Education = () => {
   return (
@@ -14,6 +16,36 @@ const Education = () => {
       >
         Education
       </Text>
+
+      {bootcamp && (
+        <>
+          <View
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+            }}
+          >
+            <Text style={{ fontWeight: 700 }}>
+              {bootcamp.title}
+              <Text style={{ fontWeight: 400, color: '#696969' }}>
+                {' '}
+                @ {bootcamp.company}
+              </Text>
+            </Text>
+
+            <DateRange
+              startDate={bootcamp.startDate}
+              endDate={bootcamp.endDate}
+            />
+          </View>
+
+          {bootcamp.bullets.map((bullet) => (
+            <Bullet text={bullet} />
+          ))}
+        </>
+      )}
 
       {education.map(({ school, degree }) => (
         <>
